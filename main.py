@@ -40,6 +40,9 @@ while True:
         
         # 5. Generera lösenord med random.choice()
         password = []
+        for i in range(length):
+            password.append(random.choice(character_pool))
             
         # 6. Visa resultat
-        print(password)
+        password_string = "".join(password)
+        print(f"Your new password is: {password_string}")
