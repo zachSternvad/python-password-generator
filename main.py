@@ -45,5 +45,5 @@ for i in range(length):
             
 # 6. Visa resultat
 password_string = "".join(password)
-print(f"Your new password is: {password_string}")
+print(f"\033[33mYour new password is: \033[0m\n{password_string}")
 
