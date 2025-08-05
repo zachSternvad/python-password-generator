@@ -17,32 +17,33 @@ while True:
     except ValueError:
         print("Please enter a valid number")
             
-        # 3. Få val för varje teckentyp (y/n för var och en)
-        upper_case = input("Do you want Uppercase Letters? (y/n): ").lower()
-        lower_case = input("Do you want Lowercase Letters? (y/n): ").lower()
-        numbers = input("Do you want Numbers (123456)? (y/n): ").lower()
-        characters = input("Do you want Special characters (!#¤%&)? (y/n): ").lower()
+# 3. Få val för varje teckentyp (y/n för var och en)
+upper_case = input("Do you want Uppercase Letters? (y/n): ").lower()
+lower_case = input("Do you want Lowercase Letters? (y/n): ").lower()
+numbers = input("Do you want Numbers (123456)? (y/n): ").lower()
+characters = input("Do you want Special characters (!#¤%&)? (y/n): ").lower()
             
-        # 4. Bygg character_pool baserat på val
-        character_pool = ""
+# 4. Bygg character_pool baserat på val
+character_pool = ""
         
-        if upper_case == "y":
-            character_pool += string.ascii_uppercase
+if upper_case == "y":
+    character_pool += string.ascii_uppercase
             
-        if lower_case == "y":
-            character_pool += string.ascii_lowercase
+if lower_case == "y":
+    character_pool += string.ascii_lowercase
             
-        if numbers == "y":
-            character_pool += string.digits
+if numbers == "y":
+    character_pool += string.digits
             
-        if characters == "y":
-            character_pool += string.punctuation
+if characters == "y":
+    character_pool += string.punctuation
         
-        # 5. Generera lösenord med random.choice()
-        password = []
-        for i in range(length):
-            password.append(random.choice(character_pool))
+# 5. Generera lösenord med random.choice()
+password = []
+for i in range(length):
+    password.append(random.choice(character_pool))
             
-        # 6. Visa resultat
-        password_string = "".join(password)
-        print(f"Your new password is: {password_string}")
+# 6. Visa resultat
+password_string = "".join(password)
+print(f"Your new password is: {password_string}")
+
